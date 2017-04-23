@@ -1,4 +1,5 @@
 import React from 'react';
+import Chart from './Chart';
 
 const calculateAvg = (data) => {
   return data.reduce( (acc, val) => {
@@ -31,6 +32,7 @@ const renderWidgets = ({widgets, removeWidget}) => {
           <li>Humidity <br/>{parseInt((avgDayData.humidity / hourlyData.length) * 100, 10)}%</li>
           <li>Pressure <br/>{parseInt(avgDayData.pressure / hourlyData.length, 10)}</li>
         </ul>
+        <Chart {...widget}/>
       </li>
     )
   })
