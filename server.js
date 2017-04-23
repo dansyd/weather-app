@@ -22,7 +22,18 @@ app.get('/api/init', (req,res) => {
         throw error;
       });
   })
-})
+});
+
+app.post('/api', (req, res) => {
+  const time = Math.floor(new Date() / 1000);
+  const url = `${BASE_URL}${API_KEY}/${req.query.lat},${req.query.long},${time}?exclude=minutely,daily,alerts,flags&units=si`
+  axios.get(url)
+    .then( result => {
+      res.send(result.data);
+    }).catch( error => {
+      throw error;
+    });
+});
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

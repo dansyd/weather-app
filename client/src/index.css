@@ -1,5 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  letter-spacing: .5px;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4 {
+  margin-top: 0;
+  margin-bottom: .7em;
+}
+
+.widget-list, .avg-data-list {
+  list-style: none;
+  padding: 0;
+}
+
+.widget-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget-list > li {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 168, 238);
+  color: white;
+  width: 31%;
+  padding: 1.5em;
+  margin: 1%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+#PlacesAutocomplete__autocomplete-container {
+  z-index: 1; 
+}
+
+.widget-list .currently {
+  flex: 1;
+}
+
+.widget-list > li h2 {
+  color: rgb(246, 140, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: .5em;
+  border-radius: 8px;
+}
+
+.remove-widget {
+  background: white;
+  color: rgb(246, 140, 0);
+  border: 1px solid rgb(246, 140, 0);
+  position: absolute;
+  border-radius: 50%;
+  top: -4px;
+  right: -4px;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+}
+
+
+.avg-data-list > li {
+  display: inline-block;
+  width: 31%;
+  margin: 0 1%;
+  text-align: center;
+}
+
+.add-widget-submit {
+  border: none;
+  background-color: rgb(246, 140, 0);
+  color: white;
+  height: 3em;
+  padding: 0 2em;
+  cursor: pointer;
 }

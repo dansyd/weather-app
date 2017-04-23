@@ -4,8 +4,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "d3": "^4.8.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-places-autocomplete": "^5.0.0"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
