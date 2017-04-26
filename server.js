@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static('client/build'));
 
 const BASE_URL = 'https://api.darksky.net/forecast/';
-const API_KEY = process.env.DARKSKY_API_KEY;
+const API_KEY = '244c3fd281eae3bd4e5a338eb5936dd1';
 
 app.get('/api/init', (req,res) => {
   var initialResult = []
