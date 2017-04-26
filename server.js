@@ -2,11 +2,12 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const initialData = require('./data');
+
 const app = express();
+app.use(express.static('client/build'));
 
 const BASE_URL = 'https://api.darksky.net/forecast/';
 const API_KEY = process.env.DARKSKY_API_KEY;
-
 
 app.get('/api/init', (req,res) => {
   var initialResult = []
