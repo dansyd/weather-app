@@ -4,6 +4,7 @@
   "description": "Weather widget app",
   "main": "server.js",
   "scripts": {
+    "setup": "node setup.js",
     "dev": "nodemon server.js"
   },
   "author": "Daniele Peviani",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2"
   }
 }
