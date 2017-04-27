@@ -1,7 +1,7 @@
 fs = require('fs');
-fs.createReadStream('.env.test')
+let stream = fs.createReadStream('.env.test')
   .pipe(fs.createWriteStream('.env'));
 
-fs.on('close', () => {
+stream.on('close', () => {
   fs.unlink('.env.test');
 });
